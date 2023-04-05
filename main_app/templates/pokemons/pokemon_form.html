@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block title%}
+<title>Add A Pokemon</title>
+{% endblock%} {% block content %} {% if object %}
+<h2>Update {{object}}'s img</h2>
+{% else %}
+<h2>Add a Pokemon</h2>
+{% endif %}
+<form action="" method="POST">
+  {{form}}
+  <p>
+    Img
+    hint:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{id}.png"
+  </p>
+  {% csrf_token %}
+  <input type="submit" value="Submit" class="btn purple" />
+</form>
+{% endblock %}

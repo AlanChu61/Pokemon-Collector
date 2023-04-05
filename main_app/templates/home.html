@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block title%}
+<title>HomePage | Pokemon APP</title>
+{% endblock %} {% block content %}
+<h2>Welcome to Pokemon</h2>
+<a href="{% url 'pokemons_index' %}"
+  ><img
+    src="https://www.pockettactics.com/wp-content/sites/pockettactics/2023/01/Pok%C3%A9mon-wallpapers-5.jpg"
+  />
+</a>
+{% endblock %}
